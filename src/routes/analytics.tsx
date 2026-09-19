@@ -73,7 +73,7 @@ function Analytics() {
                   <XAxis type="number" hide />
                   <YAxis type="category" dataKey="category" width={80} tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} axisLine={false} tickLine={false} />
                   <Tooltip formatter={(v: number) => formatMoney(v)} {...tooltipStyle} />
-                  <Bar dataKey="total" radius={[0, 8, 8, 0]}>
+                  <Bar dataKey="total" radius={[0, 8, 8, 0]} maxBarSize={28}>
                     {cats.map((c) => (
                       <Cell key={c.category} fill={CATEGORY_COLORS[c.category]} />
                     ))}

@@ -42,7 +42,7 @@ function Dashboard() {
   return (
     <>
       <PageHeader
-        title={`Hello 👋 It's ${format(new Date(), "MMMM")}`}
+        title={`Hello! It's ${format(new Date(), "MMMM")}`}
         subtitle="Here's how your money is moving this month."
         action={
           <Link
@@ -112,7 +112,7 @@ function Dashboard() {
               <div className="h-48">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
-                    <Pie data={cats} dataKey="total" nameKey="category" innerRadius={52} outerRadius={80} paddingAngle={3} stroke="none">
+                    <Pie data={cats} dataKey="total" nameKey="category" innerRadius={52} outerRadius={80} paddingAngle={3} stroke="none" isAnimationActive={false}>
                       {cats.map((c) => (
                         <Cell key={c.category} fill={CATEGORY_COLORS[c.category]} />
                       ))}
